@@ -1,0 +1,6 @@
+@Livestream_Service_HostAddress = http://localhost:5192
+
+GET {{Livestream_Service_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
