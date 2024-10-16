@@ -434,9 +434,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Apps\\.NET Projects\\LIVEDJ Project\\Livestream-Service\\Livestream-Service\\Livestream-Service.csproj",
-      "projectName": "Livestream-Service",
-      "projectPath": "C:\\Apps\\.NET Projects\\LIVEDJ Project\\Livestream-Service\\Livestream-Service\\Livestream-Service.csproj",
+      "projectUniqueName": "C:\\Apps\\.NET Projects\\LIVEDJ Project\\Livestream-Service\\Livestream-Service\\Livestream-Service.Api.csproj",
+      "projectName": "Livestream-Service.Api",
+      "projectPath": "C:\\Apps\\.NET Projects\\LIVEDJ Project\\Livestream-Service\\Livestream-Service\\Livestream-Service.Api.csproj",
       "packagesPath": "C:\\Users\\Steijn\\.nuget\\packages\\",
       "outputPath": "C:\\Apps\\.NET Projects\\LIVEDJ Project\\Livestream-Service\\Livestream-Service\\obj\\",
       "projectStyle": "PackageReference",

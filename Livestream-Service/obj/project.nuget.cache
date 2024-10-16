@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "f9INgPk+QlEUsRQYlXYt9WTdh1XCbO30Rw5CFd6tMYGokZyluKDzbsO2hWiQfCvyH2dRVzvkS6gJUjB9+EoHdQ==",
+  "dgSpecHash": "NeckMTwOswUlRW0wKjvp9Bh/9dKZNYhvBnSYRm5ZIByKqrzp1Eg8Cfbq3EqlzjZLDz7LzaGqNQUCg84lOdvKzQ==",
   "success": true,
-  "projectFilePath": "C:\\Apps\\.NET Projects\\LIVEDJ Project\\Livestream-Service\\Livestream-Service\\Livestream-Service.csproj",
+  "projectFilePath": "C:\\Apps\\.NET Projects\\LIVEDJ Project\\Livestream-Service\\Livestream-Service\\Livestream-Service.Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Steijn\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
     "C:\\Users\\Steijn\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
