@@ -31,6 +31,11 @@ jobs:
           username: 'oauth2accesstoken'
           password: '${{ steps.auth.outputs.access_token }}'
           registry: '${{ secrets.GCR_REPO_LOCATION }}-docker.pkg.dev'
+          
+      - name: Debug GCR_URL
+        run: |-
+          echo "GCR_URL: '${{ secrets.GCR_URL }}'"
+          echo "Registry: '${{ secrets.GCR_REPO_LOCATION }}-docker.pkg.dev'"
 
       - name: Build and Push Container
         run: |-
