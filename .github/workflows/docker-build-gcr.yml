@@ -34,5 +34,5 @@ jobs:
 
       - name: Build and Push Container
         run: |-
-          docker build -t "${{ secrets.GCR_URL }}/livestream-service:${{ github.sha }}" ./
-          docker push "${{ secrets.GCR_URL }}/livestream-service:${{ github.sha }}"
+          docker build -t "${{ secrets.GCR_URL }}/livestream-service:${{ github.ref_name }}" ./
+          docker push "${{ secrets.GCR_URL }}/livestream-service:${{ github.ref_name }}"
