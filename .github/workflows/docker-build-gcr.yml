@@ -19,7 +19,9 @@ jobs:
         id: auth
         uses: 'google-github-actions/auth@v2'
         with:
+          token_format: 'access_token'
           project_id: ${{ secrets.GCR_PROJECT_ID }}
+          service_account: ${{ secrets.GCR_SERVICE_ACCOUNT }}
           workload_identity_provider: ${{ secrets.GCR_WORKLOAD_IDENTITY_PROVIDER }}
 
       - name: Docker Auth
