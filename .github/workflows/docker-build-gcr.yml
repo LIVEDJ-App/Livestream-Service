@@ -35,5 +35,5 @@ jobs:
       - name: Build and Push Container
         run: |-
           TAG=$(echo "${{ github.ref_name }}" | sed 's/[^a-zA-Z0-9._-]/-/g' | tr '[:upper:]' '[:lower:]')
-          docker build -t "${{ secrets.GCR_URL }}/livestream-service::$TAG" ./
-          docker push "${{ secrets.GCR_URL }}/livestream-service::$TAG"
+          docker build -t "${{ secrets.GCR_URL }}/livestream-service:$TAG" ./
+          docker push "${{ secrets.GCR_URL }}/livestream-service:$TAG"
