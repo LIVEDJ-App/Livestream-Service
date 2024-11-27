@@ -5,6 +5,7 @@ namespace Livestream.Infrastructure.RabbitMQ
     public class ChannelManager
     {
         private readonly IConnection _connection;
+        private IModel _channel;
 
         public ChannelManager()
         {
@@ -12,11 +13,14 @@ namespace Livestream.Infrastructure.RabbitMQ
             _connection = factory.CreateConnection();
         }
 
-        public IModel CreateChannel(string channelName)
+        public IModel GetOrCreateChannel(string channelName)
         {
-            var channel = _connection.CreateModel();
-            Console.WriteLine($"Channel '{channelName}' created.");
-            return channel;
+            if (_channel == null || _channel.IsClosed)
+            {
+                _channel = _connection.CreateModel();
+                Console.WriteLine($"Channel '{channelName}' created or reused.");
+            }
+            return _channel;
         }
     }
 }

@@ -15,7 +15,7 @@ namespace Livestream.Infrastructure.RabbitMQ
 
         public void Publish<T>(T @event, string queueName, string channelName) where T : class
         {
-            var channel = _channelManager.CreateChannel(channelName);
+            var channel = _channelManager.GetOrCreateChannel(channelName);
             var body = Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(@event));
             channel.BasicPublish(exchange: "", routingKey: queueName, basicProperties: null, body: body);
             Console.WriteLine($"Message published to {queueName} on {channelName}");
