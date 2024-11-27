@@ -8,7 +8,7 @@ namespace Livestream.Domain.Entities
         [BsonId]
         [BsonGuidRepresentation(GuidRepresentation.Standard)]
         public Guid Id { get; set; }
-        public string Name { get; set; }
+        public string Name { get; set; } = null!;
         public decimal LivestreamNumber { get; set; }
     }
 }
