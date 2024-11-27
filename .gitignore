@@ -20,6 +20,9 @@ nupkg/
 # Code Rush
 .cr/
 
+#App Settings
+appsettings.Development.json
+
 # User-specific files
 *.suo
 *.user
@@ -41,3 +44,4 @@ bld/
 msbuild.log
 msbuild.err
 msbuild.wrn
+Livestream.Api/appsettings.Development.json
