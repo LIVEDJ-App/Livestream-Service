@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Livestream.Infrastructure.RabbitMQ
 {
-    public class EventPublisher
+    public class EventPublisher : IEventPublisher
     {
         private readonly ChannelManager _channelManager;
 

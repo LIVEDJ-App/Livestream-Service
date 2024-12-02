@@ -13,6 +13,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Livestream.Persistence", "L
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Livestream.Infrastructure", "Livestream.Infrastructure\Livestream.Infrastructure.csproj", "{721E8BC4-AD8A-4C58-B597-2E2D59ECC863}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Livestream.Api.Test", "Livestream.Api.Test\Livestream.Api.Test.csproj", "{2DA6D34A-BCD2-47B1-83B5-688E5CEAA3E9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Livestream.Application.Test", "Livestream.Application.Test\Livestream.Application.Test.csproj", "{83206B46-484E-46B1-813E-9A448B8F7AC5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +43,14 @@ Global
 		{721E8BC4-AD8A-4C58-B597-2E2D59ECC863}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{721E8BC4-AD8A-4C58-B597-2E2D59ECC863}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{721E8BC4-AD8A-4C58-B597-2E2D59ECC863}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2DA6D34A-BCD2-47B1-83B5-688E5CEAA3E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2DA6D34A-BCD2-47B1-83B5-688E5CEAA3E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2DA6D34A-BCD2-47B1-83B5-688E5CEAA3E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2DA6D34A-BCD2-47B1-83B5-688E5CEAA3E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83206B46-484E-46B1-813E-9A448B8F7AC5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83206B46-484E-46B1-813E-9A448B8F7AC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83206B46-484E-46B1-813E-9A448B8F7AC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83206B46-484E-46B1-813E-9A448B8F7AC5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -5,9 +5,9 @@ namespace Livestream.Application.Events
 {
     public class LivestreamCreatedEventHandler : INotificationHandler<LivestreamCreatedEvent>
     {
-        private readonly EventPublisher _eventPublisher;
+        private readonly IEventPublisher _eventPublisher;
 
-        public LivestreamCreatedEventHandler(EventPublisher eventPublisher)
+        public LivestreamCreatedEventHandler(IEventPublisher eventPublisher)
         {
             _eventPublisher = eventPublisher;
         }
