@@ -3,7 +3,6 @@ using Livestream.Persistence.Mongo.Interfaces;
 using Microsoft.Extensions.Options;
 using MongoDB.Driver;
 
-
 namespace Livestream.Persistence.Mongo.Repositories
 {
     public class LivestreamRepository : ILivestreamRepository

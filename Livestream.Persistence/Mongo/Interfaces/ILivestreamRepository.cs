@@ -1,5 +1,4 @@
-﻿
-using Livestream.Domain.Entities;
+﻿using Livestream.Domain.Entities;
 
 namespace Livestream.Persistence.Mongo.Interfaces
 {

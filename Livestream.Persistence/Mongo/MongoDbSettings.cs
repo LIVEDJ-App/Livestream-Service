@@ -1,5 +1,4 @@
 ﻿
-
 namespace Livestream.Persistence.Mongo
 {
     public class MongoDbSettings
