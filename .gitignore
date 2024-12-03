@@ -21,7 +21,7 @@ nupkg/
 .cr/
 
 #App Settings
-appsettings.Development.json
+Livestream.Api/appsettings.Development.json
 
 # User-specific files
 *.suo
@@ -44,4 +44,3 @@ bld/
 msbuild.log
 msbuild.err
 msbuild.wrn
-Livestream.Api/appsettings.Development.json
