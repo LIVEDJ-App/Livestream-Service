@@ -42,8 +42,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        shell: bash
+        shell: powershell
         run: |
-          bash ./sonar-scan.sh "${{secrets.SONAR_TOKEN}}"
+          .\.sonar\scanner\dotnet-sonarscanner begin /k:"LIVEDJ-App_Livestream-Service" /o:"livedj-app" /d:sonar.token="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io"
           dotnet build
           .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.token="${{ secrets.SONAR_TOKEN }}"
