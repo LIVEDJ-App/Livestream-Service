@@ -18,7 +18,6 @@ namespace Livestream.Application.Logic.Commands
 
         public async Task<LivestreamModel> Handle(CreateLivestreamCommand command, CancellationToken cancellationToken)
         {
-            // Persist the product
             var livestream = new LivestreamModel
             {
                 Id = Guid.NewGuid(),
@@ -27,7 +26,6 @@ namespace Livestream.Application.Logic.Commands
             };
             await _repository.AddAsync(livestream);
 
-            // Publish ProductCreatedEvent
             var livestreamCreatedEvent = new LivestreamCreatedEvent
             {
                 LivestreamId = livestream.Id,
