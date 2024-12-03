@@ -5,7 +5,7 @@ SONAR_TOKEN="$1"
 
 dotnet sonarscanner begin \
   /k:"${SONAR_PROJECT}" \
-  /d:"sonar.login=${{secrets.SONAR_TOKEN}}" \
+  /d:"sonar.login=${SONAR_TOKEN}" \
   /o:"${SONARCLOUD_ORGANIZATION_NAME}" \
   /d:"sonar.host.url=https://sonarcloud.io" \
   /d:sonar.cs.vscoveragexml.reportsPaths=coverage.xml \
