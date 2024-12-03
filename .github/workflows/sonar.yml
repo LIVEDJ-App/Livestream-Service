@@ -44,6 +44,6 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         shell: powershell
         run: |
-          bash ./sonar-scan.sh "${{secrets.SONAR_TOKEN}}"
+          bash ./sonar-scan.sh "${SONAR_TOKEN}"
           dotnet build
           .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.token="${{ secrets.SONAR_TOKEN }}"
