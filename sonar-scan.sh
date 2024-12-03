@@ -13,4 +13,4 @@ dotnet sonarscanner begin \
     **/Livestream.Domain,\
     **/Livestream.Infrastructure/**,\
     **/Livestream.Persistence,\
-    **/*Configuration.cs,\
+    **/*Configuration.cs"\
