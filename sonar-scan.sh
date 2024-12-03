@@ -3,8 +3,8 @@ SONAR_PROJECT="LIVEDJ-App_Livestream-Service"
 SONARCLOUD_ORGANIZATION_NAME="livedj-app"
 SONAR_TOKEN="$1"
 
-dotnet-sonarscanner begin
-   /k:"${SONAR_PROJECT}" \
+dotnet sonarscanner begin
+  /k:"${SONAR_PROJECT}" \
   /d:"sonar.login=${SONAR_TOKEN}" \
   /o:"${SONARCLOUD_ORGANIZATION_NAME}" \
   /d:"sonar.host.url=https://sonarcloud.io" \
