@@ -3,13 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34728.123
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Livestream.Api", "Livestream.Api\Livestream.Api.csproj", "{4EC9BF37-A702-4165-B509-BEB0FB296C68}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Livestream.Api", "Livestream.Api\Livestream.Api.csproj", "{4EC9BF37-A702-4165-B509-BEB0FB296C68}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Livestream.Application", "Livestream.Application\Livestream.Application.csproj", "{76FDF5D7-A71F-46E1-855C-56E7B1BFCBBD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Livestream.Application", "Livestream.Application\Livestream.Application.csproj", "{76FDF5D7-A71F-46E1-855C-56E7B1BFCBBD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Livestream.Domain", "Livestream.Domain\Livestream.Domain.csproj", "{1E760478-DF4F-4AC7-85C2-6005D4CC6DC7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Livestream.Domain", "Livestream.Domain\Livestream.Domain.csproj", "{1E760478-DF4F-4AC7-85C2-6005D4CC6DC7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Livestream.Persistence", "Livestream.Persistence\Livestream.Persistence.csproj", "{3DEA1612-FEEF-41BA-AD40-5FE0344875B6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Livestream.Persistence", "Livestream.Persistence\Livestream.Persistence.csproj", "{3DEA1612-FEEF-41BA-AD40-5FE0344875B6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Livestream.Infrastructure", "Livestream.Infrastructure\Livestream.Infrastructure.csproj", "{721E8BC4-AD8A-4C58-B597-2E2D59ECC863}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Livestream.Api.Test", "Livestream.Api.Test\Livestream.Api.Test.csproj", "{2DA6D34A-BCD2-47B1-83B5-688E5CEAA3E9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Livestream.Application.Test", "Livestream.Application.Test\Livestream.Application.Test.csproj", "{83206B46-484E-46B1-813E-9A448B8F7AC5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +39,18 @@ Global
 		{3DEA1612-FEEF-41BA-AD40-5FE0344875B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3DEA1612-FEEF-41BA-AD40-5FE0344875B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3DEA1612-FEEF-41BA-AD40-5FE0344875B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{721E8BC4-AD8A-4C58-B597-2E2D59ECC863}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{721E8BC4-AD8A-4C58-B597-2E2D59ECC863}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{721E8BC4-AD8A-4C58-B597-2E2D59ECC863}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{721E8BC4-AD8A-4C58-B597-2E2D59ECC863}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2DA6D34A-BCD2-47B1-83B5-688E5CEAA3E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2DA6D34A-BCD2-47B1-83B5-688E5CEAA3E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2DA6D34A-BCD2-47B1-83B5-688E5CEAA3E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2DA6D34A-BCD2-47B1-83B5-688E5CEAA3E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83206B46-484E-46B1-813E-9A448B8F7AC5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83206B46-484E-46B1-813E-9A448B8F7AC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83206B46-484E-46B1-813E-9A448B8F7AC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83206B46-484E-46B1-813E-9A448B8F7AC5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
