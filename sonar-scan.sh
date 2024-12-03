@@ -26,7 +26,7 @@ SONAR_TOKEN="$1"
 echo "Starting SonarCloud Scanner..."
 
 # Ensure the scanner is installed and in PATH
-dotnet tool install --global dotnet-sonarscanner || true
+dotnet tool install --global dotnet-sonarscanner || true \
 export PATH="$PATH:$HOME/.dotnet/tools"
 
 # Start SonarCloud analysis
