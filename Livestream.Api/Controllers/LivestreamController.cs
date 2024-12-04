@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace Livestream.Api.Controllers
 {
     [ApiController]
-    [Route("api/livestream")]
+    [Route("livestream-service/v1/livestream")]
     public class LivestreamController : ControllerBase
     {
         [HttpPost]
