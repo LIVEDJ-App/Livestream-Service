@@ -22,6 +22,7 @@ nupkg/
 
 #App Settings
 Livestream.Api/appsettings.Development.json
+Livestream.Api/appsettingsjson
 
 # User-specific files
 *.suo
