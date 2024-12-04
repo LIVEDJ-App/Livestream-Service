@@ -26,6 +26,7 @@ namespace Livestream.Application.Test.Livestreams
             Assert.NotNull(result);
             Assert.Equal(command.Name, result.Name);
             Assert.Equal(command.LivestreamNumber, result.LivestreamNumber);
+            
             await repository.Received(1).AddAsync(Arg.Is<LivestreamModel>(l => 
                 l.Name == command.Name && l.LivestreamNumber == command.LivestreamNumber));
             
@@ -48,7 +49,7 @@ namespace Livestream.Application.Test.Livestreams
 
             // Act
             await eventHandler.Handle(livestreamEvent, CancellationToken.None);
-            
+
             // Assert
             eventPublisher.Received(1).Publish(
                 livestreamEvent,
