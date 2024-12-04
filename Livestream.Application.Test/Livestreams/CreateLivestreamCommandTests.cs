@@ -18,8 +18,10 @@ namespace Livestream.Application.Test.Livestreams
             var publisher = Substitute.For<IPublisher>();
             var commandHandler = new CreateLivestreamCommandHandler(repository, publisher);
             var command = new CreateLivestreamCommand("Test Stream", 123);
+
             // Act
             var result = await commandHandler.Handle(command, CancellationToken.None);
+
             // Assert
             Assert.NotNull(result);
             Assert.Equal(command.Name, result.Name);
@@ -43,8 +45,10 @@ namespace Livestream.Application.Test.Livestreams
                 Name = "Test Stream",
                 LivestreamNumber = 123
             };
+
             // Act
             await eventHandler.Handle(livestreamEvent, CancellationToken.None);
+            
             // Assert
             eventPublisher.Received(1).Publish(
                 livestreamEvent,
