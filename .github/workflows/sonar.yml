@@ -52,3 +52,10 @@ jobs:
           dotnet test --collect:"Code Coverage" --results-directory ./TestResults
           reportgenerator -reports:./TestResults/**/coverage.cobertura.xml -targetdir:./CoverageReports -reporttypes:Cobertura
           .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.token="${{ secrets.SONAR_TOKEN }}"
+
+
+      - name: Upload Coverage Reports
+        uses: actions/upload-artifact@v3
+        with:
+          name: coverage-reports
+          path: ./CoverageReports
