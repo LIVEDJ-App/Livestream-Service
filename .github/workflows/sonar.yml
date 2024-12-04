@@ -44,9 +44,7 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         shell: powershell
         run: |
-          .\.sonar\scanner\dotnet-sonarscanner begin /k:"LIVEDJ-App_Livestream-Service" /o:"livedj-app" /d:sonar.token="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io" 
-          /d:sonar.scanner.scanAll=false /d:sonar.cs.vscoveragexml.reportsPaths="coverage.xml"
-          /d:sonar.coverage.exclusions="**/Livestream.Domain,**/Livestream.Infrastructure/**,**/Livestream.Persistence,**/Livestream.Api/Program.cs,**/Livestream.Application/Configuration.cs"
-          reportgenerator -reports:./TestResults/**/coverage.cobertura.xml -targetdir:./CoverageReports -reporttypes:Cobertura
+          .\.sonar\scanner\dotnet-sonarscanner begin /k:"LIVEDJ-App_Livestream-Service" /o:"livedj-app" /d:sonar.token="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io" /d:sonar.scanner.scanAll=false /d:sonar.cs.vscoveragexml.reportsPaths="coverage.xml" /d:sonar.coverage.exclusions="**/Livestream.Domain,**/Livestream.Infrastructure/**,**/Livestream.Persistence,**/Livestream.Api/Program.cs,**/Livestream.Application/Configuration.cs"
           dotnet test --collect:"Code Coverage" --results-directory ./TestResults
+          reportgenerator -reports:./TestResults/**/coverage.cobertura.xml -targetdir:./CoverageReports -reporttypes:Cobertura
           .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.token="${{ secrets.SONAR_TOKEN }}"
