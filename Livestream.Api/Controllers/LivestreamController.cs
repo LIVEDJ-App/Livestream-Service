@@ -9,6 +9,7 @@ namespace Livestream.Api.Controllers
     public class LivestreamController : ControllerBase
     {
         [HttpPost]
+        [Route("create")]
         public async Task<IActionResult> CreateLivestream([FromServices] IMediator mediator, [FromBody] CreateLivestreamCommand command)
         {
             await mediator.Send(command);
