@@ -42,7 +42,6 @@ jobs:
         shell: powershell
         run: |
           dotnet tool install --global dotnet-reportgenerator-globaltool
-          echo "::add-path::C:\Users\runneradmin\.dotnet\tools"
       - name: Build and analyze
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
