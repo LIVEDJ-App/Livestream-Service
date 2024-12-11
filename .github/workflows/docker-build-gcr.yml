@@ -44,7 +44,7 @@ jobs:
           gcloud container clusters get-credentials livedj-cluster-1 --region us-central1
           sed -i "s/GOOGLE_PROJECT/$GOOGLE_PROJECT/g" deployments/deployment.yml
           sed -i "s/GOOGLE_PROJECT/$GOOGLE_PROJECT/g" deployments/service.yml
-          kubectl apply -f deployment.yaml
-          kubectl apply -f service.yaml
+          kubectl apply -f deployment.yml
+          kubectl apply -f service.yml
 
       
