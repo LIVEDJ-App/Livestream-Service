@@ -37,6 +37,11 @@ jobs:
           docker build -t "${{ secrets.GCR_URL }}/livestream-service:${{ github.ref_name }}" ./
           docker push "${{ secrets.GCR_URL }}/livestream-service:${{ github.ref_name }}"
 
+      - name: 'Set up Cloud SDK'
+        uses: 'google-github-actions/setup-gcloud@v2'
+        with:
+          version: '>= 363.0.0'
+
       - name: Deploy to GKE
         env:
           GOOGLE_PROJECT: ${{ secrets.GCR_PROJECT_ID }}
