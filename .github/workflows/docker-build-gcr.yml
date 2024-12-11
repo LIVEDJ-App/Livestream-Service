@@ -41,12 +41,15 @@ jobs:
         uses: 'google-github-actions/setup-gcloud@v2'
         with:
           version: '>= 363.0.0'
+      
+      - name: Install gke-gcloud-auth-plugin
+        run: |
+          sudo apt-get update && sudo apt-get install -y google-cloud-sdk-gke-gcloud-auth-plugin
 
       - name: Deploy to GKE
         env:
           GOOGLE_PROJECT: ${{ secrets.GCR_PROJECT_ID }}
         run: |
-          gcloud auth configure-docker us-central1-docker.pkg.dev
           gcloud container clusters get-credentials livedj-cluster-1 --region us-central1
           sed -i "s/GOOGLE_PROJECT/$GOOGLE_PROJECT/g" deployments/deployment.yml
           sed -i "s/GOOGLE_PROJECT/$GOOGLE_PROJECT/g" deployments/service.yml
