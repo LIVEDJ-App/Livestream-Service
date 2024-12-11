@@ -17,7 +17,7 @@ spec:
       containers:
       - name: livestream-service
         image: us-central1-docker.pkg.dev/livedj-project/livedj-repo/livestream-service:main
-      resources:
-      limits:
-        memory: "128Mi"
-        cpu: "500m"
+        resources:
+        limits:
+          memory: "128Mi"
+          cpu: "500m"
