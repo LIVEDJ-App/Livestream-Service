@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: livestream-service
+  labels:
+    app: livestream-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: livestream-service
+  template:
+    metadata:
+      labels:
+        app: livestream-service
+    spec:
+      containers:
+      - name: livestream-service
+        image: us-central1-docker.pkg.dev/livedj-project/livedj-repo/livestream-service:main
+      resources:
+      limits:
+        memory: "128Mi"
+        cpu: "500m"

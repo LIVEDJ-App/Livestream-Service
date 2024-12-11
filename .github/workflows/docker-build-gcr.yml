@@ -42,7 +42,9 @@ jobs:
           GOOGLE_PROJECT: ${{ secrets.GCR_PROJECT_ID }}
         run: |
           gcloud container clusters get-credentials livedj-cluster-1 --region us-central1
-          sed -i "s/GOOGLE_PROJECT/$GOOGLE_PROJECT/g" resources.yaml
-          kubectl apply -f resources.yaml
+          sed -i "s/GOOGLE_PROJECT/$GOOGLE_PROJECT/g" deployments/deployment.yml
+          sed -i "s/GOOGLE_PROJECT/$GOOGLE_PROJECT/g" deployments/service.yml
+          kubectl apply -f deployment.yaml
+          kubectl apply -f service.yaml
 
       
