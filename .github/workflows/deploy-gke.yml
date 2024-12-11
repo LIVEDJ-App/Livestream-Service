@@ -1,11 +1,11 @@
-name: Push to Artifact Registry
+name: Push & Deploy to GKE
 
 on:
     push:
       branches: [ "main" ]
 
 jobs:
-  push_to_ar:
+  Deploy-to-GKE:
     permissions:
       contents: 'read'
       id-token: 'write'
