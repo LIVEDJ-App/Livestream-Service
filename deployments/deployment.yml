@@ -14,6 +14,7 @@ spec:
       labels:
         app: livestream-service
     spec:
+      automountServiceAccountToken: false
       containers:
       - name: livestream-service
         image: us-central1-docker.pkg.dev/livedj-project/livedj-repo/livestream-service:main
