@@ -25,3 +25,19 @@ spec:
           requests:
             cpu: 100m
             memory: 128Mi
+        env:
+        - name: MongoDB-ConnectionString
+          valueFrom:
+            secretKeyRef:
+              name: livestream-secrets
+              key: DATABASE_CONNECTION_STRING
+        - name: Database-Name
+          valueFrom:
+            secretKeyRef:
+              name: livestream-secrets
+              key: DATABASE_NAME
+        - name: Collection-Name
+          valueFrom:
+            secretKeyRef:
+              name: livestream-secrets
+              key: COLLECTION_NAME
