@@ -9,6 +9,7 @@ WORKDIR /src
 COPY ["Livestream.Api/Livestream.Api.csproj", "Livestream.Api/"]
 COPY ["Livestream.Application/Livestream.Application.csproj", "Livestream.Application/"]
 COPY ["Livestream.Domain/Livestream.Domain.csproj", "Livestream.Domain/"]
+COPY ["Livestream.Infrastructure/Livestream.Infrastructure.csproj", "Livestream.Infrastructure/"]
 COPY ["Livestream.Persistence/Livestream.Persistence.csproj", "Livestream.Persistence/"]
 
 RUN dotnet restore "Livestream.Api/Livestream.Api.csproj"

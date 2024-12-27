@@ -1,5 +1,6 @@
 ﻿using Livestream.Application.Events;
 using Livestream.Domain.Entities;
+using Livestream.Infrastructure.Metrics;
 using Livestream.Persistence.Mongo.Interfaces;
 using MediatR;
 
@@ -32,7 +33,9 @@ namespace Livestream.Application.Logic.Commands
                 Name = livestream.Name,
                 LivestreamNumber = livestream.LivestreamNumber
             };
+            
             await _publisher.Publish(livestreamCreatedEvent, cancellationToken);
+            LivestreamMetrics.LivestreamsCreated.Add(1);
 
             return livestream;
         }
