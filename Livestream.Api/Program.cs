@@ -28,8 +28,14 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddApplication();
 builder.Services.AddInfrastructure();
-builder.Services.Configure<MongoDbSettings>(builder.Configuration.GetSection("MongoDbSettings"));
 builder.Services.AddScoped<ILivestreamRepository, LivestreamRepository>();
+builder.Services.Configure<MongoDbSettings>(options =>
+{
+    options.ConnectionString = Environment.GetEnvironmentVariable("MongoDB-ConnectionString") ?? throw new ArgumentNullException("MongoDB-ConnectionString environment variable is not set.");
+    options.DatabaseName = Environment.GetEnvironmentVariable("Database-Name") ?? throw new ArgumentNullException("Database-Name environment variable is not set.");
+    options.CollectionName = Environment.GetEnvironmentVariable("Collection-Name") ?? throw new ArgumentNullException("Collection-Name environment variable is not set.");
+});
+
 
 var app = builder.Build();
 
