@@ -1,4 +1,4 @@
-name: SonarCloud
+name: ZAP & SonarCloud
 on:
   push:
     branches:
