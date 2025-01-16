@@ -1,9 +1,15 @@
+using System.Security.Claims;
+using Livestream.Api.Auth;
 using Livestream.Application;
 using Livestream.Infrastructure;
 using Livestream.Persistence.Mongo;
 using Livestream.Persistence.Mongo.Interfaces;
 using Livestream.Persistence.Mongo.Repositories;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.IdentityModel.Tokens;
 using OpenTelemetry.Metrics;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -19,6 +25,32 @@ builder.Services.AddOpenTelemetry()
                     }
                 );
             });
+
+
+
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+.AddJwtBearer(options =>
+{
+    options.Authority = $"https://{builder.Configuration["Auth0:Domain"]}/";
+    options.Audience = builder.Configuration["Auth0:Audience"];
+    options.TokenValidationParameters = new TokenValidationParameters
+    {
+        NameClaimType = ClaimTypes.NameIdentifier
+    };
+});
+
+builder.Services
+    .AddAuthorization(options =>
+    {
+        options.AddPolicy(
+        "manage:livestreams",
+        policy => policy.Requirements.Add(
+            new HasScopeRequirement("manage:livestreams", $"https://{builder.Configuration["Auth0:Domain"]}/")
+        )
+    );
+});
+
+builder.Services.AddSingleton<IAuthorizationHandler, HasScopeHandler>();
 
 builder.Services.AddControllers();
 builder.Services.AddHealthChecks();
@@ -44,6 +76,7 @@ app.MapPrometheusScrapingEndpoint();
 app.UseSwagger();
 app.UseSwaggerUI();
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();
